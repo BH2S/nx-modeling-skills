@@ -16,6 +16,24 @@ Use AI vision models to "see" and analyze 3D CAD models from screenshots.
 - Debugging "why does my model look wrong?"
 - Verifying assembly fit from visual inspection
 
+## Automated Pipeline (No Manual Screenshots)
+
+Use `build_and_inspect.py` for fully automated modeling + vision feedback:
+
+```bash
+python scripts/build_and_inspect.py <build_script.py> --vision
+```
+
+This pipeline:
+1. Runs the NX Open build script
+2. Captures NX viewport via PIL ImageGrab (full screen)
+3. Calls vision.sh for automated analysis
+4. Saves screenshot + analysis text alongside the build script
+
+**When to use `--vision`**: After modifying a model, to get immediate visual feedback without manual screenshots.
+
+**Limitations**: Full-screen capture only (not NX-window-targeted). Works best when NX is the primary visible window.
+
 ## Pipeline
 
 ### Step 1: Get the Screenshot
