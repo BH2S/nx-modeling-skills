@@ -47,7 +47,7 @@ These skills capture the workflow and lessons learned from building a complete t
 ## File Structure
 
 ```
-nx-modeling-skills/
+nx-modeling/
 ├── README.md
 ├── nx-reducer-modeling/
 │   ├── SKILL.md                          # Main skill instructions
@@ -59,3 +59,7 @@ nx-modeling-skills/
     └── references/
         └── vision-api.md                 # Vision API and model reference
 ```
+
+## Companion
+
+Pair with [AgentMemory](https://github.com/BH2S/AgentMemory) for persistent cross-session memory management.
